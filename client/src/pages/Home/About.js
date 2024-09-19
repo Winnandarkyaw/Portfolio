@@ -15,32 +15,24 @@ function About() {
   
   const {loading,portfolioData}=useSelector((state)=>state.root);
   const {about}=portfolioData;
-  const {skills,lottieURL,description1,description}=about;
+  const {skills,lottieURL,description1,description2}=about;
   return (
     <div>
       <SectionTitle title="About Me" />
       <div className="flex w-full items-center sm:flex-col">
         <div className="h-[70vh] w-1/2">
           <lottie-player
-            src="https://assets6.lottiefiles.com/private_files/lf30_WdTEui.json"
+            src={lottieURL}
             background="transparent"
             speed="1"
             autoplay></lottie-player>
         </div>
         <div className="flex flex-col gap-5 w-1/2 sm:w-full">
           <p className="text-white">
-            Hello!I am Win Nandar Kyaw,a passionate developer in the field of
-            technology. I enjoy creating things that live on the internet. I
-            specialize in creating dynamic and impactful digital solutions.
+           {description1 || ''}
           </p>
           <p className="text-white">
-            With a strong interest in both technology and business,aspiring to
-            be a Solution Architect.Currently,I am dedicated to mastering clean
-            code practices and design principles to elevate my technical
-            expertise.My goal is to integrate my coding skills and design
-            knowledge to provide innovative solutions that bridge the gap
-            between technical capabilities and business needs ensuring
-            efficiency and value in every project.
+            {description2 || ''}
           </p>
         </div>
       </div>

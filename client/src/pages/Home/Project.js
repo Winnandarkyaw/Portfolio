@@ -4,6 +4,7 @@ import { projects } from "../../resources/projects";
 
 function Project() {
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
+  
   return (
     <div>
       <SectionTitle title="Projects" />

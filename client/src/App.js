@@ -26,6 +26,10 @@ function App() {
   useEffect(() => {
     getPortfolioData();
   }, []);
+
+  useEffect(()=>{
+    console.log(portfolioData);
+  },[portfolioData]);
   return (
     <Router>
       {showLoading ? <Loader /> : null}
