@@ -1,17 +1,21 @@
 import React from "react";
 import SectionTitle from "../../components/SectionTitle";
-
+import { useSelector } from "react-redux";
+// const skills = [
+  //   "React",
+  //   "Javascript",
+  //   "Node JS",
+  //   "Express JS",
+  //   "Mongo DB",
+  //   "Firebase",
+  //   "Python",
+  //   "Microsoft Power Platform",
+  // ];
 function About() {
-  const skills = [
-    "React",
-    "Javascript",
-    "Node JS",
-    "Express JS",
-    "Mongo DB",
-    "Firebase",
-    "Python",
-    "Microsoft Power Platform",
-  ];
+  
+  const {loading,portfolioData}=useSelector((state)=>state.root);
+  const {about}=portfolioData;
+  const {skills,lottieURL,description1,description}=about;
   return (
     <div>
       <SectionTitle title="About Me" />
