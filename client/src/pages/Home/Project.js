@@ -1,10 +1,12 @@
 import React from "react";
 import SectionTitle from "../../components/SectionTitle";
 import { projects } from "../../resources/projects";
+import { useSelector } from "react-redux";
 
 function Project() {
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
-  
+  const {portfolioData}=useSelector((state)=>state.root);
+  const {projects}=portfolioData;
   return (
     <div>
       <SectionTitle title="Projects" />
